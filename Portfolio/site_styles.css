@@ -1,0 +1,52 @@
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: #fff; 
+  color: #333; 
+  scroll-behavior: smooth; 
+}
+
+a { text-decoration: none; }
+
+/* --- Nav --- */
+.nav-link { color: #333; font-weight: 500; transition: color 0.2s; }
+.nav-link:hover { color: #1f8a8b; }
+.btn-teal { background-color: #1f8a8b; color: #fff; border: none; }
+.btn-teal:hover { background-color: #166a6c; color: #fff; }
+
+/* --- Hamburger / Mobile nav --- */
+.nav-toggle { display: none; }
+.nav-toggle-label { display: block; width: 28px; height: 22px; position: relative; cursor: pointer; }
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block; position: absolute; height: 3px; width: 100%; background: #1f8a8b; border-radius: 2px; transition: 0.3s ease;
+}
+.nav-toggle-label span::before { content: ''; top: -8px; }
+.nav-toggle-label span::after { content: ''; bottom: -8px; }
+.nav-toggle:checked + .nav-toggle-label span { background: transparent; }
+.nav-toggle:checked + .nav-toggle-label span::before { transform: rotate(45deg); top: 0; }
+.nav-toggle:checked + .nav-toggle-label span::after { transform: rotate(-45deg); bottom: 0; }
+
+.mobile-nav { 
+  position: absolute; top: 100%; left: 0; width: 100%; background: #fff; max-height: 0; 
+  overflow: hidden; transition: max-height 0.4s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 999; 
+}
+.nav-toggle:checked ~ .mobile-nav { max-height: 500px; }
+.mobile-nav a { display: block; padding: 0.75rem 1rem; color: #333; font-weight: 500; }
+.mobile-nav a:hover { color: #1f8a8b; }
+
+/* --- Hero --- */
+.hero-img { border-radius: 8px; max-width: 100%; }
+.section-title { margin-bottom: 1.5rem; font-weight: 600; color: #1f8a8b; }
+
+/* --- Cards --- */
+.card { border: 1px solid #e0e0e0; border-radius: 8px; }
+.card-body h5 { font-weight: 600; }
+
+/* --- Skills --- */
+.skill-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-bottom: 0.5rem; }
+.skill-bar-fill { height: 100%; border-radius: 4px; background: #1f8a8b; }
+
+/* --- Footer --- */
+footer { background: #f8f9fa; margin-top: 3rem; font-size: 0.9rem; color: #555; }
+.back-to-top { display: inline-block; margin-top: 0.5rem; color: #1f8a8b; }
