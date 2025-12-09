@@ -239,17 +239,6 @@ header .header-grid {
     flex-direction: column;
 }
 
-/* -------- ARROWS -------- */
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: #666;
-    cursor: pointer;
-}
-
 /* ==============================
    GOLDEN LOOPING CAROUSEL
    ============================== */
@@ -290,14 +279,6 @@ header .header-grid {
 /* ==============================
    GOLDEN ARROWS
    ============================== */
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    cursor: pointer
-}
 
 /* hide everything by default */
 .arrow {
@@ -348,11 +329,10 @@ header .header-grid {
 
 /* --- Skills --- */
 .skill-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-bottom: 0.5rem; }
-.skill-bar-fill { height: 100%; border-radius: 4px; background: #1f8a8b; }
+.skill-bar-fill { height: 100%; border-radius: 4px; background: var(--gold); }
 
 /* --- Footer --- */
 footer { background: #f8f9fa; margin-top: 3rem; font-size: 0.9rem; color: #555; }
-.back-to-top { display: inline-block; margin-top: 0.5rem; color: #1f8a8b; }
 
 /* HEADER BORDER OVERRIDE */
 header.site-header {
