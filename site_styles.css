@@ -1,0 +1,344 @@
+:root {
+  --teal: #1f8a8b;
+  --gold: #c9a85a;
+  --muted: #6b7a7a;
+  --ink: #222;
+  --max-width: 1100px;
+   /* Gradient: gold → teal */
+  --gold-teal-gradient: linear-gradient(90deg, #c9a85a, #1f8a8b);
+}
+
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: #fff; 
+  color: #333; 
+  scroll-behavior: smooth; 
+}
+
+a { text-decoration: none; }
+
+h1{font-size:2.5rem;font-weight:700;line-height:1.2;}
+h2{font-size:2rem;font-weight:600;line-height:1.3;margin-top:2rem;}
+h3{font-size:1.6rem;font-weight:600;line-height:1.3;}
+h4{font-size:1.25rem;font-weight:600;line-height:1.4;}
+h5{font-size:1.1rem;font-weight:600;line-height:1.4;}
+h6{font-size:1rem;font-weight:600;line-height:1.4;}
+
+/*     RIGHT-SIDE TIMELINE NAV BAR  */
+.timeline-nav {
+  position: fixed;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.timeline-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each item is a fixed vertical block */
+.timeline-menu li {
+  position: relative;
+  height: 80px;             
+  width: 40px;              /* prevents drifting */
+}
+
+/* Center the emoji */
+.timeline-menu a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.6rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-menu a:hover {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ===== LINE BETWEEN EMOJIS ===== */
+/* Starting under the emoji and ending at the next emoji */
+
+.timeline-menu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: calc(50% + 20px);     /* emoji radius */
+  height: calc(80px - 40px); /* remaining vertical space */
+  
+  width: 2px;
+  background: #ccc;
+}
+
+
+.audio-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Match the audio height to header text (16px) */
+audio {
+    height: 16px !important;
+    overflow: hidden;
+}
+
+/* Native control panel height */
+audio::-webkit-media-controls-panel {
+    height: 18px !important;
+    padding: 0 !important;
+}
+
+/* Shrink buttons so they fit */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    transform: scale(0.9);
+}
+
+/* Shrink volume slider */
+audio::-webkit-media-controls-volume-slider {
+    width: 20px !important;
+}
+
+header .header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: end;   /* right align */
+    gap: 2px;
+}
+
+.right-block .audio-label {
+    font-size: 0.9rem;
+    line-height: 1.1;
+}
+
+.right-block audio {
+    height: 20px;
+}
+
+/* Teal Buttons */
+
+.btn-teal {
+    background-color: #2a9d8f;
+    color: white;
+
+    font-family: var(--bs-body-font-family);
+    font-weight: 500;
+    font-size: 1rem;
+
+    padding: 0.40rem 1rem;     
+    border-radius: 8px;
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s ease;
+}
+
+.btn-teal:hover {
+    background-color: #21867a;
+}
+
+
+/* Grey Outline Buttons */
+
+.btn-outline-secondary {
+    color: #6b7a7a;               
+    border: 1.5px solid #6b7a7a;
+
+    font-family: var(--bs-body-font-family);
+    font-weight: 500;            
+    font-size: 1rem;
+
+    padding: 0.40rem 1rem;       
+    border-radius: 8px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    transition: all .2s ease;
+}
+
+.btn-outline-secondary:hover {
+    color: #2a9d8f;              
+    border-color: #2a9d8f;
+    background: rgba(42,157,143,0.08);
+}
+
+
+/* Equal Height Across Buttons */
+
+.btn,
+.btn-teal,
+.btn-outline-secondary {
+    height: 40px;      
+    line-height: 1;   
+}
+
+#about {
+    border: 2px solid var(--gold);
+    padding: 1.2rem;
+    background: white;
+    border-radius: 0;
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+#experience .section-title {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#experience .section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;          /* move it below the text + margin */
+    width: 100%;
+    height: 3px;
+    background-color: var(--teal);
+}
+
+/* -------- PROJECT MEDIA FIT -------- */
+
+.project-card img,
+.project-card video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* see whole image */
+    display: block;
+}
+
+/* Keep cards same height */
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==============================
+   GOLDEN LOOPING CAROUSEL
+   ============================== */
+
+.carousel-css {
+    width: 100%;
+    position: relative;
+    padding: 40px 0;
+}
+
+.carousel-css input {
+    display: none; /* hide radios */
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: transform .4s ease;
+}
+
+.slide {
+    width: 320px;
+    transition: transform .4s ease, opacity .4s ease;
+    transform: scale(0.7);
+    opacity: 0.4;
+}
+
+#c1:checked ~ .slides .slide:nth-child(1),
+#c2:checked ~ .slides .slide:nth-child(2),
+#c3:checked ~ .slides .slide:nth-child(3) {
+    transform: scale(1.05);
+    opacity: 1;
+    z-index: 3;
+}
+
+/* ==============================
+   GOLDEN ARROWS
+   ============================== */
+
+/* hide everything by default */
+.arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: var(--gold);
+    cursor: pointer;
+}
+
+/* --- c1 active --- */
+#c1:checked ~ #l1,
+#c1:checked ~ #r1 { display:block; }
+
+/* --- c2 active --- */
+#c2:checked ~ #l2,
+#c2:checked ~ #r2 { display:block; }
+
+/* --- c3 active --- */
+#c3:checked ~ #l3,
+#c3:checked ~ #r3 { display:block; }
+
+/* left/right positioning */
+.left { left: 0px; }
+.right { right: 0px; }
+
+.project-card img,
+.project-media {
+    width: 100%;
+    height: auto;          /* proportional */
+    max-height: 350px;     /* same limit */
+    object-fit: contain;   /* whole frame visible */
+    flex-shrink: 0;
+    display: block;
+    margin-bottom: 12px; /* space between media and text */
+}
+
+
+/* --- Hero --- */
+.hero-img { border-radius: 8px; max-width: 100%; }
+.section-title { margin-bottom: 1.5rem; font-weight: 600; color: #1f8a8b; }
+
+/* --- Cards --- */
+.card { border: 1px solid #e0e0e0; border-radius: 8px; }
+.card-body h5 { font-weight: 600; }
+
+/* --- Skills --- */
+.skill-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-bottom: 0.5rem; }
+.skill-bar-fill { height: 100%; border-radius: 4px; background: var(--gold); }
+
+/* --- Footer --- */
+footer { background: #f8f9fa; margin-top: 3rem; font-size: 0.9rem; color: #555; }
+
+/* HEADER BORDER OVERRIDE */
+header.site-header {
+  border-bottom: none !important;
+  background-image: var(--gold-teal-gradient);
+  background-size: 100% 1.5px;   /* height of the "border" */
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
