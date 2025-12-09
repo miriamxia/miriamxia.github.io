@@ -14,18 +14,29 @@
 
 <!-- HEADER -->
 <header class="site-header bg-white border-bottom">
-  <div class="container d-flex align-items-center justify-content-between py-3">
-    <div>
-      <strong>Miriam Xia &#129719;</strong><br>
-      <small class="text-muted">Digital Curator, Special Collections & Archives</small>
-    </div>
-  
-<!-- SMALL AUDIO PLAYER -->
-  <div class="audio-container">
-    <audio id="bg-audio" controls>
-      <source src="assets/kiki.mp3" type="audio/mpeg">
-    </audio>
-    <span class="audio-label">Kiki's Delivery Service &#119070; Joe Hisaishi</span>
+  <div class="container header-grid py-3">
+
+      <!-- LEFT SIDE -->
+      <div class="left-block">
+        <h6 class="header-line-1"><strong>Miriam Xia &#129719;</strong></h6>
+        <h6 class="text-muted">Digital Curator, Special Collections & Archives</h6>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right-block">
+        <div class="right-line-1">
+          <h6 class="header-line-1 text-muted">
+            Kiki's Delivery Service &#119070; Joe Hisaishi
+          </h6>
+        </div>
+
+        <div class="right-line-2">
+          <audio id="bg-audio" controls>
+            <source src="assets/kiki.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
   </div>
 </header>
 
@@ -44,26 +55,32 @@
 <section id="home" class="container py-5">
   <div class="row align-items-center">
     <div class="col-lg-7">
-      <h1>Designing inclusive and meaningful digital spaces for art, archives, and memory.</h1>
+      <h1>Creating inclusive and meaningful digital spaces for art, archives, and memories.</h1>
       <p class="text-muted fs-5">
         Master’s student in Information Studies at McGill University and Collections Assistant at the Montreal Museum of Contemporary Art.
       </p>
       <div class="d-flex flex-wrap gap-2 mt-3">
         <a href="#projects" class="btn btn-outline-secondary">View Projects</a>
-        <a href="https://www.linkedin.com/in/miriam-xia" target="_blank" class="btn btn-outline-secondary">LinkedIn</a>        <a href="assets/Miriam_Xia_CV.pdf.pdf" class="btn btn-teal" target="_blank" download>Download CV</a>
+        <a href="https://www.linkedin.com/in/miriamxia/" target="_blank" class="btn btn-outline-secondary">LinkedIn</a>        
+        <a href="assets/Miriam_Xia_CV.pdf.pdf" class="btn btn-teal" target="_blank" download>View CV</a>
       </div>
     </div>
     <div class="col-lg-5 text-center mt-4 mt-lg-0">
-      <img src="https://via.placeholder.com/420x520.png?text=Portrait" alt="Portrait of Miriam Xia" class="hero-img">
+      <img src="assets/mirror.png" alt="Miriam in Yayoi Kusama's INFINITY MIRRORED ROOM - LET'S SURVIVE FOREVER" class="hero-img">
+      <figcaption class="hero-caption text-muted mt-2">
+      At Yayoi Kusama’s INFINITY MIRRORED ROOM — LET’S SURVIVE FOREVER.
+    </figcaption>
+  </figure>
     </div>
   </div>
 </section>
 
 <!-- ABOUT ME -->
 <section id="about" class="container py-5">
-  <h2 class="section-title">About Me</h2>
-  <p>I am a digital curator with a multidisciplinary background in cognitive science, communication studies, and information studies. Currently pursuing a Master’s in Information Studies at McGill University, I specialize in archives and UX.</p>
+  <h2 class="section-title">About Me!</h2>
+  <p>I am a digital curator with a multidisciplinary background in cognitive science and communication studies who is currently pursuing a Master’s in Information Studies at McGill University. I specialize in archives and UX.</p>
   <p>I work as a Collections Assistant at the Montreal Museum of Contemporary Art, with previous experience at Festival Accès Asie, the Port Hardy Museum and Archives, and other cultural institutions.</p>
+  <p>I am passionate about creating accessible and inclusive cultural heritage experiences. Skilled in documentation, cataloguing, research, and digital tools, I aim to bridge technology and culture to reimagine how communities engage with special collections.</p>
 </section>
 
 <!-- EXPERIENCE -->
@@ -72,7 +89,7 @@
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card p-3">
-        <h5>Collections Assistant — MAC</h5>
+        <h5>Collections Assistant @ Montreal Museum of Contemporary Art</h5>
         <p class="text-muted">September 2025 — Present</p>
         <ul>
           <li>Propose participatory strategies to enrich the MACrépertoire through community contributions.</li>
@@ -83,7 +100,7 @@
     </div>
     <div class="col-md-4">
       <div class="card p-3">
-        <h5>Summer Curatorial Projects Assistant — Port Hardy Museum and Archives</h5>
+        <h5>Summer Curatorial Projects Assistant @ Port Hardy Museum and Archives</h5>
         <p class="text-muted">July 2025 - August 2025 </p>
         <ul>
           <li>Update and refine the Wix website.</li>
@@ -94,7 +111,7 @@
     </div>
     <div class="col-md-4">
       <div class="card p-3">
-        <h5>Museum Database Assistant — McGill Visual Arts Collection </h5>
+        <h5>Museum Database Assistant @ McGill Visual Arts Collection </h5>
         <p class="text-muted">October 2023 - April 2024</p>
         <ul>
           <li>Catalogued 375+ art media records in the database on CollectionSpace.</li>
@@ -109,58 +126,110 @@
 <!-- PROJECTS -->
 <section id="projects" class="container py-5">
   <h2 class="section-title">Projects</h2>
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Sounding Public Space project image">
-        <div class="card-body"><h5>Sounding Public Space</h5><p>Participatory sound art research.</p></div>
+
+  <div class="carousel-css">
+
+    <!-- RADIO BUTTONS -->
+    <input type="radio" name="carousel" id="c1" checked>
+    <input type="radio" name="carousel" id="c2">
+    <input type="radio" name="carousel" id="c3">
+
+    <!-- SLIDES -->
+    <div class="slides">
+
+      <div class="slide">
+        <div class="project-card">
+          <img src="assets/carrot.jpg" alt="A View of the Carrot Campaign Exhibit">
+          <div class="card-body">
+            <h5>Carrot Campaign Exhibit</h5>
+            <p>Exhibit design for the Port Hardy Museum and Archives.
+              <a href="https://www.bchistory.ca/news/13526007" target="_self">
+              <i>In the News: British Columbia Historical Federation</i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="project-card">
+          <video controls class="project-media">
+            <source src="assets/faa.mp4" type="video/mp4" alt="Event Dancer Lineup">
+        </video>
+        <div class="card-body">
+            <h5>Waacking Event Promotional Video</h5>
+            <p>For Festival Accès Asie.
+              <a href="https://www.mcgill.ca/arts-internships/article/arts-internship-spotlight/internship-highlight-miriam-xia-festival-access-asie" target="_self">
+              <i>Read more about my internship experience</i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="project-card">
+          <img src="assets/owls.jpg" alt="Owls Gather Together by Kenojuak Ashevak">
+          <div class="card-body">
+            <h5>Art Piece</h5>
+            <p>For the McGill Visual Arts Collection.
+              <a href="https://news.library.mcgill.ca/owls-invite-us-to-gather-together-in-old-chancellor-day-hall/" target="_self">
+              <i>Read here</i></a></p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Carrot Campaign Exhibit project image">
-        <div class="card-body"><h5>Carrot Campaign Exhibit</h5><p>Exhibit design for the Port Hardy Museum and Archives.</p></div>
-      </div>
+    <!-- LEFT ARROWS -->
+    <label class="arrow left" id="l1" for="c3">&#10094;</label>
+    <label class="arrow left" id="l2" for="c1">&#10094;</label>
+    <label class="arrow left" id="l3" for="c2">&#10094;</label>
+
+    <!-- RIGHT ARROWS -->
+    <label class="arrow right" id="r1" for="c2">&#10095;</label>
+    <label class="arrow right" id="r2" for="c3">&#10095;</label>
+    <label class="arrow right" id="r3" for="c1">&#10095;</label>
     </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Digital Collections at MAC project image">
-        <div class="card-body"><h5>Digital Collections at MAC</h5><p>Ongoing metadata and digital curation work.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- SKILLS -->
 <section id="skills" class="container py-5">
   <h2 class="section-title">Skills & Tools</h2>
   <h6>Digital Curation</h6>
   <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
-  <ul><li>Metadata, cataloguing, digitization</li></ul>
+  <ul>Metadata | Cataloguing | Digitization</ul>
 
   <h6>Design & Research</h6>
   <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-  <ul><li>UX design, accessibility, user studies</li></ul>
+  <ul>UX design | Graphics | Literature Reviews</ul>
 
   <h6>Tools</h6>
   <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-  <ul><li>HTML, CSS, Figma, Axiell Collections, CollectionSpace</li></ul>
+  <ul>Google+ | Microsoft | Axiell Collections | CollectionSpace</ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="container py-5">
-  <h2 class="section-title">Contact / Connect</h2>
-  <p>Feel free to reach out via email or LinkedIn.</p>
+  <h2 class="section-title">Contact</h2>
+  <p>I would love to hear from you :)</p>
   <p>
     <a href="mailto:miriam.xia@gmail.com" class="btn btn-teal">Send Email</a>
-    <a href="https://www.linkedin.com/in/miriam-xia" target="_blank" class="btn btn-outline-secondary ms-2">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/miriamxia/" target="_blank" class="btn btn-outline-secondary ms-2">LinkedIn</a>
   </p>
 </section>
 
 <!-- FOOTER -->
 <footer class="text-center py-4">
-  <p>© 2025 Miriam Xia</p>
-  <small>Accessibility statement and Land acknowledgment to come </small>
+  <p>© 2025 — All rights reserved</p><!-- ACCESSIBILITY & LAND ACKNOWLEDGEMENT -->
+
+  <h6>Accessibility Statement</h6>
+  <p>
+    I strive to make this portfolio accessible and usable for everyone. 
+    If you experience any difficulty or have suggestions, I welcome your feedback 
+    so I can continue improving.
+  </p>
+
+  <h6>Land Acknowledgement</h6>
+  <p>
+    I acknowledge that I live and work on the ancestral lands of the Kanien’kehá:ka (Mohawk) people. 
+    I honour their enduring relationship with this territory and recognise the ongoing 
+    histories of Indigenous peoples in Tiohtià:ke/Montréal.
+  </p>
 </footer>
 
 </body>
